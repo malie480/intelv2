@@ -1,0 +1,8 @@
+name: workflow1
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: step1
+        run: echo "hello from malie"
