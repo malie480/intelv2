@@ -7,8 +7,10 @@ jobs:
     steps:
       - name: this is step1
         run: echo "hello from step1"
+        sleep 60
       - name: second step
         run: |
           echo "hello from step2"
           cat /etc/os-release
+          sleep 60
       - run: echo "step3" 
