@@ -14,6 +14,6 @@ jobs:
       - name: second step
         run: |
           echo "hello from step2"
-          echo %path
+          echo %variable%
           sleep 10
       - run: echo "step3" 
