@@ -10,10 +10,10 @@ jobs:
       - name: this is step1
         run: |
           echo "hello from step1"
-          sleep 20
+          sleep 10
       - name: second step
         run: |
           echo "hello from step2"
-          path
-          sleep 20
+          echo %path
+          sleep 10
       - run: echo "step3" 
