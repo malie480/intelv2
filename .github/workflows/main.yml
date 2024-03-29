@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: this is step1
         run: |
-          echo $hostname
+          echo $HOSTNAME
           sleep 20
       - name: second step
         run: |
