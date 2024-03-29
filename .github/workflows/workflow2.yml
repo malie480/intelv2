@@ -1,0 +1,13 @@
+# this is comment - this is my first workflow
+name: workflow2
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this is step1
+        run: echo "hello from step1"
+      - name: second step
+        run: |
+          echo "hello from step2"
+          cat /etc/os-release
