@@ -1,6 +1,8 @@
 # this is comment - this is my first workflow
 name: workflow1
-on: push
+on:
+  workflow_dispatch:
+  push:
 jobs:
   job1:
     runs-on: ubuntu-latest
