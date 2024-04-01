@@ -26,6 +26,7 @@ jobs:
       - name: second step
         run: |
           uname -a
+          echo $greetings!
           echo "hello from step2-job1"
           echo $greetings! $name $last_name can be contacted if this is not job1.
           cat /etc/os-release
@@ -45,6 +46,7 @@ jobs:
       - name: second step
         run: |
           echo "hello from step2-job2"
+          echo $greetings!
           cat /etc/os-release
           sleep 5
       - run: echo "step3" 
