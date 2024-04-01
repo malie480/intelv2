@@ -6,10 +6,12 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    env:
+      last_name: kawamoto
     steps:
       - name: this is step1
         run: |
-          echo $name is the owner of this repo. 
+          echo $name $last_name is the owner of this repo. 
           sleep 20
         env:
           name: malie
@@ -17,7 +19,7 @@ jobs:
         run: |
           uname -a
           echo "hello from step2-job1"
-          echo $name can be contacted if this is not job1.
+          echo $name $last_name can be contacted if this is not job1.
           cat /etc/os-release
           sleep 20
       - run: echo "step3" 
