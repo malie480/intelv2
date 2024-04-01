@@ -12,7 +12,7 @@ jobs:
       - name: this is step1
         run: |
           echo $name $last_name is the owner of this repo. 
-          sleep 20
+          sleep 5
         env:
           name: malie
       - name: second step
@@ -21,7 +21,7 @@ jobs:
           echo "hello from step2-job1"
           echo $name $last_name can be contacted if this is not job1.
           cat /etc/os-release
-          sleep 20
+          sleep 5
       - run: echo "step3" 
   job2:
     runs-on: ubuntu-latest
@@ -29,10 +29,11 @@ jobs:
       - name: this is step1
         run: |
           echo $HOSTNAME
-          sleep 20
+          echo $name $last_name is the owner of this repo. 
+          sleep 5
       - name: second step
         run: |
           echo "hello from step2-job2"
           cat /etc/os-release
-          sleep 20
+          sleep 5
       - run: echo "step3" 
