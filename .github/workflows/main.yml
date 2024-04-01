@@ -5,15 +5,18 @@ on:
   push:
 jobs:
   job1:
-    runs-on: malie2
+    runs-on: ubuntu-latest
     steps:
       - name: this is step1
         run: |
-          echo $HOSTNAME
+          echo $name is the owner of this repo. 
           sleep 20
+        env:
+          name: malie
       - name: second step
         run: |
           echo "hello from step2-job1"
+          echo $name can be contacted if this is not job1.
           cat /etc/os-release
           sleep 20
       - run: echo "step3" 
