@@ -15,6 +15,7 @@ jobs:
           name: malie
       - name: second step
         run: |
+          uname -a
           echo "hello from step2-job1"
           echo $name can be contacted if this is not job1.
           cat /etc/os-release
