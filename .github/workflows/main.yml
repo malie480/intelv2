@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       last_name: kawamoto
+      greetings: GoodDay
     steps:
       - name: this is step1
         run: |
@@ -17,11 +18,12 @@ jobs:
           sleep 5
         env:
           name: malie
+          greetings: Aloha
       - name: second step
         run: |
           uname -a
           echo "hello from step2-job1"
-          echo $name $last_name can be contacted if this is not job1.
+          echo $greetings! $name $last_name can be contacted if this is not job1.
           cat /etc/os-release
           sleep 5
       - run: echo "step3" 
