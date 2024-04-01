@@ -3,6 +3,8 @@ name: workflow1
 on:
   workflow_dispatch:
   push:
+env:
+  gretings: hello
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -11,7 +13,7 @@ jobs:
     steps:
       - name: this is step1
         run: |
-          echo $name $last_name is the owner of this repo. 
+          echo $greetings! $name $last_name is the owner of this repo. 
           sleep 5
         env:
           name: malie
@@ -29,7 +31,7 @@ jobs:
       - name: this is step1
         run: |
           echo $HOSTNAME
-          echo $name $last_name is the owner of this repo. 
+          echo $greetings! $name $last_name is the owner of this repo. 
           sleep 5
       - name: second step
         run: |
