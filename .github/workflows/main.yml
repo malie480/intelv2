@@ -5,7 +5,7 @@ on:
   push:
 jobs:
   job1:
-    runs-on: malie2
+    runs-on: ubuntu-latest
     steps:
       - name: this is step1
         run: |
@@ -13,7 +13,7 @@ jobs:
           sleep 20
       - name: second step
         run: |
-          echo "hello from step2"
+          echo "hello from step2-job1"
           cat /etc/os-release
           sleep 20
       - run: echo "step3" 
@@ -26,7 +26,7 @@ jobs:
           sleep 20
       - name: second step
         run: |
-          echo "hello from step2"
+          echo "hello from step2-job2"
           cat /etc/os-release
           sleep 20
       - run: echo "step3" 
