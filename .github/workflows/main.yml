@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
 env:
-  gretings: hello
+  greetings: hello
 jobs:
   job1:
     runs-on: ubuntu-latest
