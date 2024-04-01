@@ -15,7 +15,7 @@ jobs:
       - name: this is step1
         run: |
           echo $greetings! $name $last_name is the owner of $GITHUB_REPOSITORY for application ${{ vars.APP_NAME }} .
-          echo Reachout to $name for any updates.
+          echo Reachout to $name for any updates. Thank you.
           echo This step is running on $RUNNER_OS on instance $RUNNER_NAME
           sleep 5
         env:
