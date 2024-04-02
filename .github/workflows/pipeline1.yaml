@@ -28,7 +28,7 @@ jobs:
       - run: echo "step3" 
   stage:
       runs-on: ubuntu-latest
-      needs: deploy
+      needs: test
       steps:
       - name: this is step1 stage
         run: echo "step1" 
@@ -39,7 +39,7 @@ jobs:
       - run: echo "step3" 
   deploy:
       runs-on: ubuntu-latest
-      needs: stage
+      needs: [ stage,test ]
       steps:
       - name: this is step1 deploy
         run: echo "step1" 
