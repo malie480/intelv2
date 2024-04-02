@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: this is step1
-        run: echo "step1" 
+        run: ech "step1" 
       - name: second step
         run: |
           echo "step2" 
