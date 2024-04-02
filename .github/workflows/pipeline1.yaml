@@ -22,6 +22,7 @@ jobs:
       steps:
       - name: this is step1 of test
         run: ech "step1" 
+        continue-on-error: true
       - name: second step
         run: |
           echo "step2" 
