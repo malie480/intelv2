@@ -3,7 +3,7 @@ name: pipeline
 on:
   workflow_dispatch:
   push:
-  pull_request:
+  #pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +14,9 @@ jobs:
       - name: second step
         run: |
           echo "step2" 
-          sleep 10
-        if: github.event_name == 'push'
+          echo $RUNNER_OS 
+          sleep 5
+        #if: github.event_name == 'push'
       - run: echo "step3" 
   test:
       runs-on: ubuntu-latest
