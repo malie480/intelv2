@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: this is step1
+      - name: this is step1 of build
         run: echo "step1" 
       - name: second step
         run: |
@@ -18,17 +18,29 @@ jobs:
       runs-on: ubuntu-latest
       needs: build
       steps:
-      - name: this is step1
+      - name: this is step1 of test
         run: echo "step1" 
       - name: second step
         run: |
           echo "step2" 
           sleep 10
       - run: echo "step3" 
-  test2:
+  stage:
       runs-on: ubuntu-latest
+      needs: test
       steps:
-      - name: this is step1
+      - name: this is step1 stage
+        run: echo "step1" 
+      - name: second step
+        run: |
+          echo "step2" 
+          sleep 10
+      - run: echo "step3" 
+  deploy:
+      runs-on: ubuntu-latest
+      needs: stage
+      steps:
+      - name: this is step1 deploy
         run: echo "step1" 
       - name: second step
         run: |
