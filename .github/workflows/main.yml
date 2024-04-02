@@ -19,6 +19,7 @@ jobs:
           echo Reachout to $name for any updates.
           echo This step is running on $RUNNER_OS on instance $RUNNER_NAME
           echo ${{ vars.APP_NAME }} is running on ${{ vars.SERVER_NAME }}
+          echo Application password is ${{ secrets.DB_PASSWD }}
           sleep 5
         env:
           name: malie
