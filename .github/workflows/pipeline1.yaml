@@ -9,7 +9,7 @@ jobs:
     #needs: deploy
     steps:
       - name: this is step1 of build
-        run: ech "step1" 
+        run: echo "step1" 
       - name: second step
         run: |
           echo "step2" 
