@@ -17,10 +17,11 @@ jobs:
       - run: echo "step3" 
   test:
       runs-on: ubuntu-latest
+      continue-on-error: true
       needs: build
       steps:
       - name: this is step1 of test
-        run: echo "step1" 
+        run: ech "step1" 
       - name: second step
         run: |
           echo "step2" 
