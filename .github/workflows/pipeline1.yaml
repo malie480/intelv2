@@ -1,0 +1,18 @@
+# this is comment - this is my first workflow
+name: pipeline
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: this is step1
+        run: |
+          echo "step1" 
+          sleep 10
+      - name: second step
+        run: |
+          echo "step2" 
+          sleep 10
+      - run: echo "step3" 
