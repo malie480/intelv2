@@ -16,6 +16,7 @@ jobs:
       - run: echo "step3" 
   test:
       runs-on: ubuntu-latest
+      needs: build
       steps:
       - name: this is step1
         run: echo "step1" 
