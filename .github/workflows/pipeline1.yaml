@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: deploy
+    #needs: deploy
     steps:
       - name: this is step1 of build
         run: echo "step1" 
@@ -28,7 +28,7 @@ jobs:
       - run: echo "step3" 
   stage:
       runs-on: ubuntu-latest
-      needs: test
+      needs: deploy
       steps:
       - name: this is step1 stage
         run: echo "step1" 
