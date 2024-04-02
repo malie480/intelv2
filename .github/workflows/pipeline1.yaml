@@ -8,9 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: this is step1
+        run: echo "step1" 
+      - name: second step
         run: |
-          echo "step1" 
+          echo "step2" 
           sleep 10
+      - run: echo "step3" 
+  test:
+      runs-on: ubuntu-latest
+      steps:
+      - name: this is step1
+        run: echo "step1" 
       - name: second step
         run: |
           echo "step2" 
