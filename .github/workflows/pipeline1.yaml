@@ -12,12 +12,15 @@ jobs:
       - name: this is step1 of build
         run: echo "step1" 
       - name: second step
+        if: runner.os == 'Linux' 
         run: |
           echo "step2" 
-          echo $RUNNER_OS 
+          echo The oper system is $RUNNER_OS. 
           sleep 5
         #if: github.event_name == 'push'
-      - run: echo "step3" 
+      - name: third step
+        if: runner.os == 'Windows'
+        run: echo "step3" 
   test:
       runs-on: ubuntu-latest
       #continue-on-error: true
