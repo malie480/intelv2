@@ -25,8 +25,10 @@ jobs:
       - name: third step
         id: step3
         #if: runner.os == 'Windows'
-        if: ${{ failure() && steps.step3.conclusion == 'failure' }}
         run: echo "step3" 
+      - name: debug step 
+        if: ${{ failure() && steps.step3.conclusion == 'failure' }}
+        run: echo "Job failed" 
   test:
       runs-on: ubuntu-latest
       #continue-on-error: true
