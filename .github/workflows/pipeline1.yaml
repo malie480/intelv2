@@ -20,15 +20,15 @@ jobs:
         run: |
           echo "step2" 
           echo The oper system is $RUNNER_OS. 
-          sleep 5
+          sleep 30
         #if: github.event_name == 'push'
       - name: third step
         id: step3
         #if: runner.os == 'Windows'
-        run: cho "step3" 
-      - name: debug step 
-        if: ${{ failure() && steps.step3.conclusion == 'failure' }}
-        run: echo "Job failed" 
+        run: echo "step3" 
+      - name: cancelled step 
+        if: ${{ cancelled() }}
+        run: echo "Job cancelled" 
   test:
       runs-on: ubuntu-latest
       #continue-on-error: true
