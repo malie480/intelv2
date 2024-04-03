@@ -18,14 +18,14 @@ jobs:
       - name: second step
         #if: runner.os == 'Linux' 
         run: |
-          cho "step2" 
+          echo "step2" 
           echo The oper system is $RUNNER_OS. 
           sleep 5
         #if: github.event_name == 'push'
       - name: third step
         id: step3
         #if: runner.os == 'Windows'
-        run: echo "step3" 
+        run: cho "step3" 
       - name: debug step 
         if: ${{ failure() && steps.step3.conclusion == 'failure' }}
         run: echo "Job failed" 
@@ -40,7 +40,7 @@ jobs:
       - name: second step
         run: |
           echo "step2" 
-          sleep 10
+          sleep 5
       - run: echo "step3" 
   stage:
       runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
       - name: second step
         run: |
           echo "step2" 
-          sleep 10
+          sleep 5
       - run: echo "step3" 
   deploy:
       runs-on: ubuntu-latest
@@ -63,5 +63,5 @@ jobs:
       - name: second step
         run: |
           echo "step2" 
-          sleep 10
+          sleep 5
       - run: echo "step3" 
