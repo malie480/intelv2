@@ -16,14 +16,16 @@ jobs:
           echo "step1"
           ls -al
       - name: second step
-        if: runner.os == 'Linux' 
+        #if: runner.os == 'Linux' 
         run: |
-          echo "step2" 
+          cho "step2" 
           echo The oper system is $RUNNER_OS. 
           sleep 5
         #if: github.event_name == 'push'
       - name: third step
-        if: runner.os == 'Windows'
+        id: step3
+        #if: runner.os == 'Windows'
+        if: ${{ failure() && steps.step3.conclusion == 'failure' }}
         run: echo "step3" 
   test:
       runs-on: ubuntu-latest
